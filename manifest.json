@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Handy",
+  "version": "1.0.0",
+  "description": "A Firefox Android add-on with a floating browsing controller",
+  "permissions": ["tabs", "storage", "clipboardWrite"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "handy-tabs@epoweri.com",
+      "strict_min_version": "109.0"
+    }
+  }
+}
