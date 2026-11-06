@@ -142,7 +142,7 @@ function initializeHandyTabs() {
   recentList.setAttribute("aria-label", "Recently used tabs");
 
   const rows = [
-    [["Close current tab", "close"]],
+    [["Close current tab", "close"], ["Scroll to top", "top"]],
     [["Previous tab", "previous"], ["Next tab", "next"]],
     [["Reload current tab", "reload"], ["New tab", "new"]],
     [["Share current page", "share"], ["Show all tabs", "list"]]
@@ -265,6 +265,12 @@ function initializeHandyTabs() {
   async function runAction(action) {
     status.textContent = "";
     try {
+      if (action === "top") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        menu.classList.remove("open");
+        orb.setAttribute("aria-expanded", "false");
+        return;
+      }
       if (action === "share") {
         if (!/^https?:$/.test(location.protocol)) {
           status.textContent = "Nothing to share on this page.";
@@ -394,6 +400,7 @@ function initializeHandyTabs() {
     const icons = {
       menu: "M4 6h16M4 12h16M4 18h16",
       close: "M18 6 6 18M6 6l12 12",
+      top: "M12 19V5m-7 7 7-7 7 7",
       previous: "m15 18-6-6 6-6",
       next: "m9 18 6-6-6-6",
       reload: "M20 11a8 8 0 0 0-14.9-3M4 4v4h4m-4 5a8 8 0 0 0 14.9 3M20 20v-4h-4",
@@ -405,7 +412,7 @@ function initializeHandyTabs() {
     svg.setAttribute("viewBox", "0 0 24 24");
     svg.setAttribute("fill", "none");
     svg.setAttribute("stroke", "currentColor");
-    svg.setAttribute("stroke-width", "2");
+    svg.setAttribute("stroke-width", name === "top" ? "3.5" : "2");
     svg.setAttribute("stroke-linecap", "round");
     svg.setAttribute("stroke-linejoin", "round");
     svg.setAttribute("aria-hidden", "true");

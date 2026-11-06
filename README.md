@@ -12,6 +12,7 @@ A Firefox Android add-on with a floating browsing controller: access tab closing
 - The floating button starts at the middle of the left side and remembers its position.
 - Options:
   - close tab
+  - scroll to top
   - prev/next tab
   - refresh
   - new tab (with a customizable page)
