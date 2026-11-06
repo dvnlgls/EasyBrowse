@@ -4,6 +4,9 @@ A Firefox Android add-on with a floating browsing controller: access tab closing
 
 > This is especially handy on mobile devices where you don't have to go all the way to the extreme end of the screen to do basic browsing tasks.
 
+![Menu options](demo/options.jpg)
+![Floating orb](demo/floating_orb.jpg)
+
 ## Features
 
 - The floating button starts at the middle of the left side and remembers its position.
