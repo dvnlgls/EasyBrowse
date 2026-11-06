@@ -38,7 +38,7 @@ function initializeHandyTabs() {
       height: 44px;
       padding: 0;
       border-radius: 50%;
-      background: rgb(0, 102, 255);
+      background: rgb(63, 63, 65);
       opacity: .3;
       touch-action: none;
       cursor: grab;

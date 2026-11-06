@@ -34,6 +34,15 @@ A Firefox Android add-on with a floating browsing controller: access tab closing
 - Move the `.xpi` file to your device
 - Use the `install from file` option
 
+## Development
+
+- Phone: Enable dev mode. Enable Wifi debugging. Tap the label and note the ip and port
+- FF: Enable dev mode and Remote debugging via USB
+- For the first time, connect phone to the dev machine via USB and allow debugging
+- Dev machine: `./adb connect 192.168.2.42:45147`
+- Find the FF package name: `./adb shell cmd package resolve-activity --brief org.mozilla.firefox`
+  - output will look like: org.mozilla.firefox/.AppRetro2004. `.AppRetro2004` is what we need
+- In src dir: `npx web-ext run -t firefox-android --firefox-apk=org.mozilla.firefox --android-device=192.168.2.42:45147 --firefox-apk-component=.AppRetro2004 --adb-remove-old-artifacts`
 
 ## Privacy:
   - It's easy to check that this addon collects no data and sends no data to any remote server

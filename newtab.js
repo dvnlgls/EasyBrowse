@@ -2,7 +2,7 @@ const DEFAULTS = [
   { name: "Showgrid", url: "https://theshowgrid.com/" },
   { name: "Weather", url: "https://www.google.com/search?client=firefox-b-m&q=montreal+weather" },
   { name: "Bookman", url: "http://bookman.home.arpa/" },
-  { name: "Homecycle", url: "http://homecycle.home.arpa/" },
+  { name: "HCycle", url: "http://homecycle.home.arpa/" },
   { name: "reddit", url: "https://old.reddit.com/rising/" },
   { name: "Pihole", url: "https://pi.home.arpa/admin/login" },
 ];
