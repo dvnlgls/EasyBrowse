@@ -6,9 +6,6 @@
 web-ext-config.js
 .web-extension-id
 
-# web-ext build and signing output
-web-ext-artifacts/
-*.xpi
 *.zip
 .amo-upload-uuid
 
